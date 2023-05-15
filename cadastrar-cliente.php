@@ -79,7 +79,7 @@ if(isset($_GET['modo'])){
     <script src="js/modulo.js"></script>
     <link rel="stylesheet" href="./css/style.css">
 </head>
-<body>
+<body class="body-cadastrar-cliente">
    <section class="cadastrar-cliente">
         <div class="wrapper-cadastrar">
         <div class="container container-atendimento">

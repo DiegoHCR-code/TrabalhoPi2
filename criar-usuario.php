@@ -35,9 +35,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Petzone</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
-<body>
-    <div class="home-painel">
+<body class="body-criar-usuario">
+    <section class="criar-usuario">
+        <div class="wrapper-usuario">
+            <div class="container">
+            <div class="botoes-sair-e-voltar" style="display: flex; justify-content: end; margin-bottom: 20px;">
+            <div class="logout topminor">
+                <a href="home.php">
+                    <img src="icon/back.png" alt="voltar" class="img-voltar">
+                </a>
+            </div>
+            <div class="logout">
+                <a href="bd/logout.php">
+                    <img src="icon/logout.png" alt="sair" style="width:50px; margin-left: 20px;">
+                </a>
+            </div>
+            </div>
+            <div class="home-painel">
         <div class="container-cadastro-produto">
             <div>
                 <img src="icon/user.png" alt="icone de usuario">
@@ -109,5 +125,8 @@
             ?>
         </div>
     </div>
+            </div>
+        </div>
+    </section>
 </body>
 </html>

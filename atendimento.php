@@ -15,7 +15,7 @@ if(isset($_SESSION)){
     <link rel="stylesheet" href="./css/style.css">
     <script src="js/modulo.js"></script>
 </head>
-<body>
+<body class="body-atendimento">
     <section class="atendimento">
         <div class="wrapper-atendimento">
         <div class="container container-atendimento">
