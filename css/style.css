@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .atendimento {
+    background-color: #292a2e02;
+  }
+  *:disabled {
+    background-color: dimgrey !important;
+    color: linen !important;
+    opacity: 1 !important;
+    cursor: not-allowed! important;
+  }
+  
+  ul, li, al {
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  .container {
+    margin: 0 auto;
+    max-width: 2180px;
+  }
+  
+  .wrapper-answers{
+    width: 100%;
+  }
+  
+  #span-required3{
+    color: red;
+    display: none;
+    font-size: 22px;
+  }
+  
+  #span-required2{
+    color: red;
+    display: none;
+    font-size: 22px;
+  }
+  
+  #text-span{
+    color: red;
+    display: none;
+    font-size: 22px;
+  }
+  
+  .span-required{
+    color: red;
+    display: none;
+    font-size: 18px;
+  }
+  
+  .btn-hover {
+    opacity: 1;
+  }
+  
+  .btn-hover:hover {
+    opacity: 0.8;
+  }
+  
+body{
+    background-color: rgb(32, 32, 32);
+}
+
+  button {
+    animation: pulse 0.6s infinite;
+  }
+
+
+.wrapper-atendimento{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 100px;
+    padding: 100px;
+    border-radius: 25px;
+}
+
+.input-field{
+    display: flex;
+    flex-direction: column;    
+}
+
+.cliente-cadastrado{
+    text-align: center;
+}
+
+.cliente-cadastrado h1 h3{
+    margin-bottom: 5px;
+}
+
+.row{
+    margin: 25px 0px;
+}
+
+.input-field{
+    text-align: left;
+    margin: 25px 0px;
+    position: relative;
+}
+
+.texto-signup{
+
+    font-size: 12px;
+    margin-bottom: 10px;
+    background-color: rgb(32, 32, 32);
+    padding: 10px 30px;
+    border-radius: 25px;
+    width: 55%;
+}
+
+.sign-up{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.texto-signup a{
+    border-bottom: 1px solid white;
+    color: white;
+    opacity: 0.9;
+}
+
+
+.botaoatendimento{
+    padding: 15px 20px;
+    width: 75%;
+    background-color: green;
+    border: 1px solid white;
+    border-radius: 25px;
+    color: white;
+    font-size: 15px;
+    font-style: bold;
+}
+
+#last_name{
+    background-color: #f2f0f0;
+    border-radius: 25px;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid rgb(197, 197, 197);
+    box-shadow: 1px 3px 5px #e8e8e8;
+}
+
+.last_name{
+    color: rgb(54, 178, 97);
+    font-size: 15px;
+}
+
+.cpf-cliente h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 40px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #000000d1;
+}
+
+.cpf-cliente h3{
+    font-family: 'Dancing Script', cursive;
+    font-size: 30px;
+}
+
+.wrapper-cadastrar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    width: 50%;
+    margin: 0 auto;
+    border-radius: 25px;
+    margin-top: 75px;
+    margin-bottom: 75px;
+    padding: 100px;
+}
+
+.cadastro-cliente-col h1{
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    font-size: 40px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #000000d1;
+}
+.legenda{
+    text-align: center;
+    margin-bottom: 25px;
+    border: 3px solid red;
+    border-radius: 25px;
+}
+
+.obrigatorio{
+    color: red;
+    font-size: 20px;
+}
+
+.text-input{
+    margin-bottom: 15px;
+}
+
+.input-cliente{
+    background-color: #f2f0f0;
+    border-radius: 25px;
+    padding: 5px 50px;
+    margin-top: 5px;
+    border: 1px solid rgb(197, 197, 197);
+    box-shadow: 1px 3px 5px #e8e8e8;
+}
+
+.input-cliente-rua{
+    background-color: #f2f0f0;
+    border-radius: 25px;
+    padding: 5px 50px;
+    margin-top: 5px;
+    border: 1px solid rgb(197, 197, 197);
+    box-shadow: 1px 3px 5px #e8e8e8;
+}
+
+.input-cliente-estado{
+    background-color: #f2f0f0;
+    border-radius: 25px;
+    padding: 5px 50px;
+    margin-top: 5px;
+    border: 1px solid rgb(197, 197, 197);
+    box-shadow: 1px 3px 5px #e8e8e8;
+}
+
+.text-input-sexo{
+    margin-bottom: 25px;
+}
+
+.radio-option{
+    margin: 0 10px 0 5px;
+    margin-top: 5px;
+}
+
+.endereco-titulo{
+    margin-bottom: 30px;
+}
+
+.text-input-row p{
+    color: black;
+    font-weight: bold;
+    opacity: 0.8;
+}
+
+.text-input-row{
+    margin-bottom: 25px;
+}
+
+.botao-cadastrar{
+    padding: 10px 20px;
+    width: 83%;
+    background-color: green;
+    border: 1px solid white;
+    border-radius: 25px;
+    color: white;
+    font-size: 15px;
+    font-style: bold;
+}
+
+.menu-painel{
+    display: none;
+}
+
+.help{
+    display: none;
+}
+
+.pagina-inicial{
+    background: white;
+}
+
+.wrapper-clientes{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background: white;
+}
+
+.filtros h1{
+    text-align: center;
+}
+
+.tabela-cabecalho{
+    width: 100%;
+    height: 60px;
+    background-color: #000000d1;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    border-radius: 25px 25px 0px 0px;
+}
+
+.titulo{
+    font-family: 'Dancing Script', cursive;
+    font-size: 40px;
+    margin-bottom: 50px;
+    border-bottom: 1px solid #000000d1;
+    width: 75%;
+}
+
+.buscar-nome{
+    font-family: 'Dancing Script', cursive;
+    font-size: 25px;
+    margin-right: 10px;
+}
+
+.input-txt{
+    background-color: #f2f0f0;
+    border-radius: 25px;
+    padding: 10px 50px;
+    margin-top: 5px;
+    border: 1px solid rgb(197, 197, 197);
+    box-shadow: 1px 3px 5px #e8e8e8;
+}
+
+.input-txt-layout2{
+    display: flex;
+    align-items: center;
+}
+
+.btn-filtro{
+    margin-left: 10px;
+    padding: 10px 50px;
+    border-radius: 25px;
+    border: none;
+    color: white;
+    background-color: green;
+}
+
+.filtros{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tabela-linha{
+    text-align: center;
+    font-weight: bold;
+    height: auto;
+    padding: 0 50px;
+    display: flex;
+    align-items: center;
+}
+
+.cor-linha{
+    background-color: rgb(180, 180, 180);
+}
+
+.tabela-de-exibicao{
+    margin-top: 25px;
+}
+
+.tabela-coluna{
+    width: 100%;
+    height: auto;
+    font-weight: bold;
+    padding: 40px;
+}
+
+.texto-center{
+    text-align: center;
+}
+
+.altura-tabela-clientes {
+    height: 60px !important;
+    padding: 8px;
+    box-sizing: border-box;
+    border-right: 1px solid rgb(180, 180, 180);
+    border-left: 1px solid rgb(180, 180, 180);
+
+}
+
+@media only screen and (max-width: 775px) {
+    .wrapper-atendimento{
+        width: 90%;
+    }
+
+    .wrapper-cadastrar{
+        width: 90%;
+    }
+}
