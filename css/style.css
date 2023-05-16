@@ -762,14 +762,130 @@ tr{
 
 .tabela-compra{
     margin-bottom: 200px;
-
 }
+
+.menu-painel{
+    display: none;
+}
+
+.cadastro-animal{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    background-color: white;
+    margin-top: 100px;
+    padding: 100px;
+    border-radius: 25px;
+}
+
+.titulo-animal h1{
+    font-family: 'Dancing Script', cursive;
+    font-size: 35px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #000000d1;
+}
+
+.linha input,
+.coluna input,
+.coluna-right select,
+.coluna select{
+    background-color: #f2f0f0;
+    border-radius: 25px;
+    padding: 5px 40px;
+    margin-top: 5px;
+    border: 1px solid rgb(197, 197, 197);
+    box-shadow: 1px 3px 5px #e8e8e8;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.linha .botao{
+    color: white;
+    background: green;
+    padding: 15px 0;
+    margin-bottom: 100px;
+}
+
+.info-animal .linha h6,
+.coluna-right h6,
+.linha-noflex h6{
+    color: rgb(54, 178, 97);
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.lista-cores {
+    width: 100%;
+    overflow: auto;
+    list-style: none;
+    background-color: white;
+    top: 245px;
+    z-index: 0;
+    border: 2px solid grey;
+    padding: 20px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    
+}
+
+.lista-cores label{
+    margin-right: 100px;
+}
+
+.selected_cor{
+    background-color: #000000;
+}
+
+.lista-cores label div {
+    width: 120px;
+    height: 30px;
+    margin-bottom: 5px;
+    float: left;
+}
+
+.lista-cores input {
+    float: right;
+}
+
+.doenca-animal{
+    border-top: 1px solid black;
+}
+
+.lista-doencas .linha{
+    display: flex;
+    margin: 20px 0px;
+    flex-direction: row-reverse;
+    align-items: center;
+    padding: 0px 0px 0px 20px;
+}
+
+.head-doencas{
+    text-align: center;
+    padding-top: 10px;
+}
+
+.head-doencas h1{
+    font-family: 'Dancing Script', cursive;
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+
+.lista-doencas{
+    border: 1px solid rgb(32, 32, 32);
+    border-radius: 25px;
+    
+}
+
 
 .body-atendimento,
 .body-cadastrar-cliente,
 .body-secao-principal,
 .body-criar-usuario,
-.body-painel-cliente{
+.body-painel-cliente,
+.body-cadastro-animal{
     background-color: rgb(32, 32, 32);
 }
 
