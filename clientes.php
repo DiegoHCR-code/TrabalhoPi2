@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="css/style.css">
         <title>SIAP</title>
         <script src="painel-produtos/js/toggle-menu.js"></script>
+        <link rel="shortcut icon" href="./icon/favicon.ico" type="image/x-icon">
     </head>
     <body>
         <section class="clientes">
@@ -20,16 +21,6 @@
             <?php
                 require_once('./modulo/menu.php');
             ?>
-            <div class="help">
-                <img src="./icon/question.png" alt="ask">
-                <div class="devContato">
-                    <div>
-                        <p>Dúvidas? Entre em contato com o Dev.</p>
-                        <br>
-                        <p>555-123</p>
-                    </div>
-                </div>       
-            </div>
             <div class="container">
                 <?php
                     require_once('modulo/header.php');

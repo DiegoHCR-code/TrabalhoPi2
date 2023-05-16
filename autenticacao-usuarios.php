@@ -30,6 +30,7 @@
     <script src="painel-produtos/js/toggle-menu.js"></script>
     <title>PetZone</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./icon/favicon.ico" type="image/x-icon">
 </head>
     <body class="body-secao-principal">
         <section>

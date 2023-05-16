@@ -78,6 +78,7 @@ if(isset($_GET['modo'])){
     <title>Petzone</title>
     <script src="js/modulo.js"></script>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./icon/favicon.ico" type="image/x-icon">
 </head>
 <body class="body-cadastrar-cliente">
    <section class="cadastrar-cliente">

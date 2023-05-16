@@ -10,6 +10,7 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" href="./css/style.css">
         <title>Petzone</title>
+        <link rel="shortcut icon" href="./icon/favicon.ico" type="image/x-icon">
     </head>
     <body>
         <section class="home-page">

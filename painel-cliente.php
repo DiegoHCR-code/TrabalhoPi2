@@ -16,25 +16,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Petzone</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <script src="js/jquery.js"></script>
+    <script src="./painel-produtos/js/toggle-menu.js"></script>
     <script>
-            $('#imprimir').click(function(){   
-                window.open('modalCompras.php', '_blank');
-            });
+        $('#imprimir').click(function(){   
+            window.open('modalCompras.php', '_blank');
+        });
+        
         </script>
+<link rel="stylesheet" href="./css/style.css">
+<link rel="shortcut icon" href="./icon/favicon.ico" type="image/x-icon">
 </head>
 <body class="body-painel-cliente">
-    <section class="painel-secao-cliente">
-        <div class="wrapper-painel-cliente">
-            <div class="container">
             <div>
-    <div id="container-modal-compras">
-        <div id="modal-compras">
+    <div class="pagina-inicial-atendimento">
+            <?php
+                require_once('./modulo/menu.php');
+            ?>
 
-        
-        </div>
-    </div>
-    </div>
     <div class="container-compra">
     <?php
         $sql = "SELECT * FROM clientes WHERE id =".$_GET['idcliente'];
@@ -43,6 +42,16 @@
 
 
     ?>
+    <div id="container-modal-compras">
+        <div id="modal-compras">
+
+        
+        </div>
+    </div>
+    </div>
+    <section class="painel-secao-cliente">
+        <div class="wrapper-painel-cliente">
+            <div class="container">
 
     <div class="conteudo-cliente">
         <div class="informacoes-cliente">

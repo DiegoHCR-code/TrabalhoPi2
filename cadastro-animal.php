@@ -61,25 +61,16 @@
         <title>SIAP</title>
         <link rel="stylesheet" href="./css/style.css">
         <script src="js/modulo.js"></script>
+        <link rel="shortcut icon" href="./icon/favicon.ico" type="image/x-icon">
     </head>
     <body class="body-cadastro-animal">
+            <?php
+                require_once('./modulo/menu.php');
+            ?>
     <section class="cadastro-animal">
         <div class="wrapper-cadastro-animal">
             <div class="container">
             <div class="pagina-inicial-atendimento">
-            <?php
-                require_once('./modulo/menu.php');
-            ?>
-            <div class="help">
-                <img src="./icon/question.png" alt="ask">
-                <div class="devContato">
-                    <div>
-                        <p>Dúvidas? Entre em contato com o Dev.</p>
-                        <br>
-                        <p>555-123</p>
-                    </div>
-                </div>       
-            </div>
             <div class="container-atendimento">
                 <form class="fomulario-cadastro-animal" method="POST" action="<?=$link?>">
                     <div class="titulo-animal">

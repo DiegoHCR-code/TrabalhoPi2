@@ -33,30 +33,6 @@
     width: 100%;
   }
   
-  #span-required3{
-    color: red;
-    display: none;
-    font-size: 22px;
-  }
-  
-  #span-required2{
-    color: red;
-    display: none;
-    font-size: 22px;
-  }
-  
-  #text-span{
-    color: red;
-    display: none;
-    font-size: 22px;
-  }
-  
-  .span-required{
-    color: red;
-    display: none;
-    font-size: 18px;
-  }
-  
   .btn-hover {
     opacity: 1;
   }
@@ -265,16 +241,9 @@
     font-style: bold;
 }
 
-.menu-painel{
-    display: none;
-}
-
-.help{
-    display: none;
-}
-
 .pagina-inicial{
     background: white;
+    border-radius: 25px;
 }
 
 .wrapper-clientes{
@@ -535,7 +504,8 @@
     padding: 40px;
 }
 
-.linha-tabela{
+.linha-tabela,
+.linha-tabela-compra{
     width: 100%;
     height: 60px;
     display: flex;
@@ -547,11 +517,14 @@
     border-bottom: 1px solid rgb(180, 180, 180);
 }
 
-.coluna-tabela{
+.coluna-tabela,
+.coluna-tabela-compra{
     width: 100%;
     height: auto;
     font-weight: bold;
     padding: 40px;
+    display: flex;
+    justify-content: center;
 }
 
 .coluna-tabela img{
@@ -561,11 +534,6 @@
 .img-voltar,
 .img-sair{
     width: 50px;
-}
-
-.menu-painel,
-.help{
-    display: none;
 }
 
 .conteudo-home{
@@ -625,7 +593,7 @@ tr{
 }
 
 .linha-painel-cliente{
-    width: 50%;
+    width: 75%;
     border: 5px solid black;
     padding: 40px;
     margin: 30px auto;
@@ -706,7 +674,7 @@ tr{
 }
 
 .conteudo-compras{
-    width: 50%;
+    width: 75%;
     border: 5px solid black;
     padding: 40px;
     margin: 30px auto;
@@ -728,6 +696,8 @@ tr{
     height: auto;
     font-weight: bold;
     padding: 40px;
+    display: flex;
+    justify-content: center;
 }
 
 .info-cliente-compras{
@@ -753,7 +723,7 @@ tr{
 }
 
 .conteudo-animais-painel-cliente{
-    width: 50%;
+    width: 75%;
     border: 5px solid black;
     padding: 40px;
     margin: 30px auto;
@@ -764,10 +734,6 @@ tr{
     margin-bottom: 200px;
 }
 
-.menu-painel{
-    display: none;
-}
-
 .cadastro-animal{
     width: 50%;
     display: flex;
@@ -775,7 +741,6 @@ tr{
     align-items: center;
     margin: 0 auto;
     background-color: white;
-    margin-top: 100px;
     padding: 100px;
     border-radius: 25px;
 }
@@ -799,6 +764,18 @@ tr{
     box-shadow: 1px 3px 5px #e8e8e8;
     margin-bottom: 10px;
     width: 100%;
+}
+
+.select{
+    background-color: #f2f0f0;
+    border-radius: 25px;
+    padding: 5px 40px;
+    margin-top: 5px;
+    border: 1px solid rgb(197, 197, 197);
+    box-shadow: 1px 3px 5px #e8e8e8;
+    margin-bottom: 10px;
+    width: 40%;
+    margin-left: 10px;
 }
 
 .linha .botao{
@@ -879,13 +856,213 @@ tr{
     
 }
 
+.menu-painel{
+    width:50px;
+    height: 100vh;
+    background-color:black;
+    position: fixed;
+    left: -200px;
+    left:0;
+    float: left;
+    box-sizing: border-box;
+    transition: 300ms;
+}
+.menu-item{
+    width:100%;
+    height: 50px;
+    position: relative;
+    left: -300px;
+    transition: 300ms;
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-weight: bold;
+    font-size: 15px;
+}
+.menu-item img{
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+}
+
+.menu-item:hover{
+    cursor: pointer;
+    background-color: rgb(91, 111, 124);
+}
+.menu-item a {
+    width: 100%;
+    height: 100%;
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.menu-item-nome{
+    width: 300px;
+    height: 20px;
+    position: relative;
+    left:70px;
+    top:-50px;
+    visibility: hidden;
+    opacity: 0;
+    font-weight: bold;
+    color:#fff;
+    background-color: rgb(71, 71, 104);
+    padding-left: 10px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.459);
+}
+.menu-item:hover > .menu-item-nome{
+    visibility: visible;
+    opacity: 1;
+    left: 100px;
+    transition: 1s;
+}
+#abrir-menu{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    box-sizing: border-box;
+}
+#abrir-menu img{
+    width: 40px;
+    height: 40px;
+    transition: 300ms;
+}
+
+#abrir-menu:hover{
+    cursor: pointer;
+}
+
+.wrapper-config-animais-secao{
+    width: 75%;
+    margin: 0 auto;
+}
+
+.menu-item a{
+    color: white;
+}
+
+#confi-animais{
+    width: 75%;
+    margin: 0 auto;
+}
+
+.config-animais{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.color-botaozin{
+    padding: 2px;
+}
+
+.linha-flex-row{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.form-raca{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-raca form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-raca form input{
+    margin-left: 10px;
+}
+.form-raca form select{
+    margin-left: 10px;
+}
+
+.tabela-linha .tabela-coluna a img{
+    width: 30px;
+}
+
+.tabelas-de-visualizacao-config,
+.tabela-de-exibicao-mid{
+    width: 75%;
+    margin: 0 auto;
+}
+
+.tabelas-de-visualizacao-config h1{
+    width: 100%;
+    text-align: center;
+}
+
+.tabela-de-exibicao-small{
+    margin-bottom: 50px;
+    border-bottom: 2px solid black;
+}
+
+.filtro-linha{
+    margin-bottom: 25px;
+}
+
+.input-txt-layout2{
+    margin-bottom: 20px;
+}
+
+.input-txt-layout2 input{
+    margin-left: 20px;
+}
+
+.color{
+    width: 50px;
+    height: 25px;
+}
+
+.btn-add{
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    border: 0;
+    background-color: unset;
+    background-image: url(../icon/plus.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.cpf-cliente-sucesso{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 100px;
+}
+.cpf-cliente-sucesso .botaoatendimento{
+    width: 50%;
+}
+
+.coluna-tabela-compra img{
+    width: 30px;
+}
+
+.cpf-cliente-sucesso .botaoatendimento a{
+    color: white;
+}
+
 
 .body-atendimento,
 .body-cadastrar-cliente,
 .body-secao-principal,
 .body-criar-usuario,
 .body-painel-cliente,
-.body-cadastro-animal{
+.body-cadastro-animal,
+.config-animals-secao{
     background-color: rgb(32, 32, 32);
 }
 

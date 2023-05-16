@@ -14,6 +14,7 @@ if(isset($_SESSION)){
     <title>Petzone</title>
     <link rel="stylesheet" href="./css/style.css">
     <script src="js/modulo.js"></script>
+    <link rel="shortcut icon" href="./icon/favicon.ico" type="image/x-icon">
 </head>
 <body class="body-atendimento">
     <section class="atendimento">
