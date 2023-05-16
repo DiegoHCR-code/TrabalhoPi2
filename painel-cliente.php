@@ -16,14 +16,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Petzone</title>
+    <link rel="stylesheet" href="./css/style.css">
     <script>
             $('#imprimir').click(function(){   
                 window.open('modalCompras.php', '_blank');
             });
         </script>
 </head>
-<body>
-    <div>
+<body class="body-painel-cliente">
+    <section class="painel-secao-cliente">
+        <div class="wrapper-painel-cliente">
+            <div class="container">
+            <div>
     <div id="container-modal-compras">
         <div id="modal-compras">
 
@@ -44,20 +48,21 @@
         <div class="informacoes-cliente">
             <div class="linha-painel-cliente">
                 <div class="info-cliente-item">
+                    <div class="img-avatar">
                     <img class="avatar" src="icon/avatar/<?=$rsCliente['avatar']?>" alt="avatar">
-                    <input type="text" value="<?=$rsCliente['nome']?> - <?=$rsCliente['email']?>" id="nome-cliente" readonly>
-                    <hr>
+                    </div>
+                <div class="conteudo-cliente">
+                <input type="text" value="<?=$rsCliente['nome']?> - <?=$rsCliente['email']?>" id="nome-cliente" readonly>
                     <h3>Endereço</h3>
                     <h5>CEP: <?=$rsCliente['cep']?> </h5> <h5><?=$rsCliente['logradouro']?> - nº<?=$rsCliente['numero']?></h5>
                     <h5><?=$rsCliente['bairro']?></h5>
                     <h5><?=$rsCliente['cidade']?> - <?=$rsCliente['estado']?></h5>
-                    <hr>
 
-                    <button>
+                    <button class="edit-painel-cliente">
                         <a href="cadastrar-cliente.php?idcliente=<?=$_GET['idcliente']?>&modo=editar">Editar</a>
                     </button>
 
-                    <button>
+                    <button class="new-painel-cliente">
                     <?php
                         if(isset($_GET['modo'])){
                     ?>
@@ -73,9 +78,11 @@
                     ?>
                 </button>
                 </div>
+                </div>
             </div>
 
-            <h1 class="texto-center">COMPRAS DO CLIENTE</h1>
+            <div class="conteudo-compras">
+            <h1>COMPRAS DO CLIENTE</h1>
                         <div class="info-cliente-compras">
 
                             <div class="tabela-compra">
@@ -157,85 +164,69 @@
                         
                     </div>
 
-                    <div class="animais-cliente texto-center">
-                        <div class="consumir">
-                            <button class="botao">
-                                <a href="consumir.php?idcliente=<?=$_GET['idcliente']?>">
-                                    COMPRAR PRODUTOS
-                                </a>
-                            </button>
+                        <div class="conteudo-animais-painel-cliente">
+                        <h1>ANIMAIS CADASTRADOS</h1>
 
-                            <button class="botao">
-                                <a href="bd/ordem-servico.php?idcliente=<?=$_GET['idcliente']?>">
-                                    CONSUMIR SERVIÇOS
-                                </a>
-                            </button>
-                            
-                            
+<div class="tabela-compra">
+    
+    <div class="thead-linha">
+        
+        <div class="thead-coluna">
+            Nome
+        </div>
+        <div class="thead-coluna">
+            Espécie
+        </div>
+        <div class="thead-coluna">
+            Opções
+        </div>
+        
+    </div>
+    <?php
+        $count = (int) 0;
+
+        $sql = "select animais.*, especies.nome as especie from
+        animais inner join especies on animais.id_especie = especies.id where animais.id_dono = ".$_GET['idcliente']." and animais.ativado = 1";
+        
+        
+        $select = mysqli_query($conexao, $sql);
+
+        while($rsConsulta = mysqli_fetch_array($select)){
+            $count +=1;
+
+            if($count % 2 == 0)
+                $cor = "cor";
+            else
+                $cor = "";
+
+        
+    ?>
+    <div class="linha-tabela-compra <?=$cor?>">
+        <div class="coluna-tabela-compra">
+            <?=$rsConsulta['nome']?>
+        </div>
+        <div class="coluna-tabela-compra">
+            <?=$rsConsulta['especie']?>
+        </div>
+        <div class="coluna-tabela-compra">
+            <a href="bd/deletar.php?modo=deletaranimal&id=<?=$rsConsulta['id']?>&idcliente=<?=$_GET['idcliente']?>">
+                <img src="./icon/cancel.png" alt="delete">
+            </a>
+            
+        </div>
+    </div>
+    <?php
+        }
+    ?>
+</div>
                         </div>
-                        <h1 class="texto-center">ANIMAIS CADASTRADOS</h1>
-
-                        <div class="tabela-compra">
-                            
-                            <div class="thead-linha">
-                                
-                                <div class="thead-coluna">
-                                    Nome
-                                </div>
-                                <div class="thead-coluna">
-                                    Espécie
-                                </div>
-                                <div class="thead-coluna">
-                                    Opções
-                                </div>
-                                
-                            </div>
-                            <?php
-                                $count = (int) 0;
-
-                                $sql = "select animais.*, especies.nome as especie from
-                                animais inner join especies on animais.id_especie = especies.id where animais.id_dono = ".$_GET['idcliente']." and animais.ativado = 1";
-                                
-                                
-                                $select = mysqli_query($conexao, $sql);
-
-                                while($rsConsulta = mysqli_fetch_array($select)){
-                                    $count +=1;
-
-                                    if($count % 2 == 0)
-                                        $cor = "cor";
-                                    else
-                                        $cor = "";
-
-                                
-                            ?>
-                            <div class="linha-tabela-compra <?=$cor?>">
-                                <div class="coluna-tabela-compra">
-                                    <?=$rsConsulta['nome']?>
-                                </div>
-                                <div class="coluna-tabela-compra">
-                                    <?=$rsConsulta['especie']?>
-                                </div>
-                                <div class="coluna-tabela-compra">
-                                    <a href="bd/deletar.php?modo=deletaranimal&id=<?=$rsConsulta['id']?>&idcliente=<?=$_GET['idcliente']?>">
-                                        <img src="./icon/cancel.png" alt="delete">
-                                    </a>
-                                    
-                                </div>
-                            </div>
-                            <?php
-                                }
-                            ?>
-
-
-                                
-                              
-                        </div>
-                    
-                    </div>
+            </div>
         </div>
     </div>
 
     </div>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
