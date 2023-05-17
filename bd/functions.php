@@ -31,7 +31,7 @@ function inserirRaca ( $tabela, $nome, $especie ){
     }
 }
 //Função para cadastrar Fornecedors
-function inserirFornecedor ( $tabela, $nome, $cnpj, $tel ){
+/*function inserirFornecedor ( $tabela, $nome, $cnpj, $tel ){
 
     require_once('conexao.php');
     $conexao = conexaoMysql();
@@ -44,7 +44,7 @@ function inserirFornecedor ( $tabela, $nome, $cnpj, $tel ){
         echo("erro ao executar o script");
         echo($sql);
     }
-}
+}*/
 //Função para cadastrar Clientes
 function inserirCliente( $nome, $cpf, $telefone, $celular, $data_nascimento, $email, $sexo, $cep, $logradouro, $bairro, $cidade, $estado, $numero, $complemento, $avatar ){
     require_once('conexao.php');

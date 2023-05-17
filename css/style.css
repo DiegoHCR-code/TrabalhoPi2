@@ -805,6 +805,7 @@ tr{
     border-radius: 25px;
     display: flex;
     align-items: center;
+    flex-direction: column;
     
 }
 
@@ -1066,6 +1067,19 @@ tr{
     background-color: rgb(32, 32, 32);
 }
 
+#close-animal-modal{
+    display: none;
+}
+
+#infoAnimal{
+    width: 30px;
+}
+
+.tabela-de-exibicao{
+    width: 100%;
+    margin: 0 auto;
+}
+
 @media only screen and (max-width: 775px) {
     .wrapper-atendimento{
         width: 90%;
@@ -1074,4 +1088,53 @@ tr{
     .wrapper-cadastrar{
         width: 90%;
     }
+
+    .tabela-de-exibicao{
+        width: 90%;
+        margin-left: 55px;
+    }
+
+    .filtro-linha{
+        margin-left: 55px;
+    }
+
+    .input-txt-layout2 input,
+    .input-txt {
+        margin-left: 5px;
+    }
+
+    .conteudo-compras,
+    .conteudo-animais-painel-cliente{
+        width: 100%;
+        padding: 0px;
+    }
+
+
+    .painel-secao-cliente,
+    .conteudo-animais-painel-cliente h1{
+        padding: 15px;
+    }
+
+
+
+    .filtros .titulo{
+        margin-top: 50px;
+    }
+
+    .conteudo-compras h1{
+        padding: 15px;
+    }
+
+    .linha-painel-cliente{
+        width: 100%;
+    }
+
+    .tabela-compra{
+        padding: 5px;
+    }
+
+    .edit-painel-cliente{
+        padding: 10px 65px;
+    }
+
 }

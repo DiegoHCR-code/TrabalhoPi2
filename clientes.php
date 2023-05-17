@@ -10,17 +10,18 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" href="css/style.css">
-        <title>SIAP</title>
-        <script src="painel-produtos/js/toggle-menu.js"></script>
+        <title>Petzone</title>
         <link rel="shortcut icon" href="./icon/favicon.ico" type="image/x-icon">
+        <script src="js/jquery.js"></script>
+        <script src="painel-produtos/js/toggle-menu.js"></script>
     </head>
     <body>
-        <section class="clientes">
-            <div class="wrapper-clientes">
-            <div class=" container pagina-inicial">
             <?php
                 require_once('./modulo/menu.php');
             ?>
+        <section class="clientes">
+            <div class="wrapper-clientes">
+            <div class=" container pagina-inicial">
             <div class="container">
                 <?php
                     require_once('modulo/header.php');

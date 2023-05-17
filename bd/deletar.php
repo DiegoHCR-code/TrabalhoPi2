@@ -2,7 +2,6 @@
 
 require_once('conexao.php');
 $conexao = conexaoMysql();
-
 $categoria = (String) "categoria";
 $temperamento = (String) "temperamentos";
 $porte = (String) "porte";
@@ -10,11 +9,11 @@ $doenca = (String) "doencas";
 $cor_predominante = (String) "cor_predominante";
 $raca = (String) "racas";
 $especies = (String) "especies";
-$fornecedor = (String) "fornecedores";
+//$fornecedor = (String) "fornecedores";
 $clientes = (String) "clientes";
-$produtos = (String) "produtos";
+//$produtos = (String) "produtos";
 $animais = (String) "animais";
-$servicos = (String) "servicos";
+//$servicos = (String) "servicos";
 
 //deletar categorias
 if(isset($_GET['modo'])){
@@ -85,14 +84,14 @@ if(isset($_GET['modo'])){
             header('location: ../config-animais.php');
         }
     }
-    if($_GET['modo'] == 'deletarfornecedor'){
+    /*if($_GET['modo'] == 'deletarfornecedor'){
         
         $id = $_GET['id'];
 
         if(deletarRegistro($fornecedor,$id)){
             header('location: ../config-animais.php');
         }
-    }
+    }*/
     if($_GET['modo'] == 'deletarcliente'){
 
         $id = $_GET['id'];
@@ -101,7 +100,7 @@ if(isset($_GET['modo'])){
             header('location: ../clientes.php');
         }
     }
-    if($_GET['modo'] == 'deletarproduto'){
+    /*if($_GET['modo'] == 'deletarproduto'){
         $id = $_GET['id'];
 
         if(deletarRegistro($produtos, $id)){
@@ -114,7 +113,7 @@ if(isset($_GET['modo'])){
         if(deletarRegistro($servicos, $id)){
             header('location: ../painel-produtos/visualizar-servicos.php');
         }
-    }
+    }*/
     if($_GET['modo'] == 'deletaranimal'){
 
         $id = $_GET['id'];
