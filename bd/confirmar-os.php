@@ -5,8 +5,7 @@
 
     if(isset($_POST['btn-confirmar-os'])){
 
-        $opcaoPagamento = $_POST['rdoPagar'];
-        $valor_total = number_format($_POST['txt-valor-total'], 2, '.',' ');
+        $valor_total =  number_format(str_replace(",",".",str_replace(".","",$_POST['txt-valor-total'])), 2, '.', '');
 
         if($opcaoPagamento != 0){
 

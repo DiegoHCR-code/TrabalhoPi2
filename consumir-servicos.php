@@ -8,7 +8,7 @@
     $animal = (String)"";
     $link = (String)"";
     $action = (String)"";
-
+    $doença = (String)"";
     $cep = (String)"";
     $logradouro = (String)"";
     $numero = (String)"";
@@ -65,7 +65,6 @@
 
             }
         }
-            
 
         $link = (String)"cadastro-animal.php?idos=".$idos;
         $action = "bd/cadastrar-ordem-servico.php";
@@ -80,28 +79,14 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>SIAP</title>
+        <title>Petzone</title>
         <link rel="stylesheet" href="css/style.css">
         <script src="js/jquery.js"></script>
         <script src="painel-produtos/js/toggle-menu.js"></script>
         <script src="js/modulo.js"></script>
+        <link rel="shortcut icon" href="./icon/favicon.ico" type="image/x-icon">
         <script>
-            $(document).ready(function(){
-                
-                $('#transporteSim').click(function(){
-                    $('#endereco-os').css({
-                        display:'block',
-                        
-                    });
-                    $('.ativar').attr('required', 'required');
-                });
-                $('#transporteNao').click(function(){
-                    $('#endereco-os').css({
-                        display:'none',
-                       
-                    });
-                    $('.ativar').removeAttr('required');
-                });
+            $(document).ready(function(){      
                 var count = 0;
                 $('#confirmButton').click(function (){
                     count ++;
@@ -173,7 +158,38 @@
                         </div>
                     </div>
 
+                    <div class="doenca-animal consumir-doencas">
+                        <div class="head-doencas center">
+                            <h1>Doenças do animal</h1>
+                        </div>
+                        <div class="lista-doencas center">
+                            <?php
+                                $sql = "select * from doencas";
+                                $select = mysqli_query($conexao, $sql);
+                                
+                                while($rsDoencas = mysqli_fetch_array($select))
+                                {
+                            ?>
+                            <div class="linha">
+                                <input type="checkbox" name="checklist[]" value="<?=$rsDoencas['id']?>">
 
+                                <h6><?=$rsDoencas['nome']?></h6>
+                            </div>
+                            <?php
+                                }
+                            ?>
+                        </div>
+                    </div>
+
+                    <div class="linha-tabela-orderm margem-bottom-pequena">
+                        <div class="coluna-tabela-ordem-nome">
+                            <h5>Veterinário Responsável</h5>
+                        </div>
+                        <div class="coluna-tabela-ordem">
+                        <input type="text" id="txt-veterinario-ordem" name="txt-veterinario-ordem" onkeypress="return validarEntrada(event,'numeric');" class='input-ordem'>
+
+                        </div>
+                    </div>
 
                     <div class="linha-tabela-orderm margem-bottom-pequena">
                         <div class="coluna-tabela-ordem-nome">
@@ -197,7 +213,7 @@
                     
                     
                     <div class="titulo-servicos">
-                        <h5>Selecione os serviços</h5>
+                        <h5>Selecione os tratamentos</h5>
                     </div>
                     <hr>
 

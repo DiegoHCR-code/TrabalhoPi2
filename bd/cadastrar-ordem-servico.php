@@ -31,6 +31,8 @@
             $cidade = $_POST['txt-cidade-ordem'];
             $uf = $_POST['txt-uf-ordem'];
 
+           
+
             if(isset($valor_transporte)){
                 $valor_transporte = explode(",", $_POST['txt-valor-transporte']);
                 $valor_transporte = $valor_transporte[0].".".$valor_transporte[1];
@@ -39,10 +41,6 @@
                 $valor_transporte = $valor_transporte[0].".".$valor_transporte[1];
             }
             
-
-            //Tenho que criar a situacao de pagamento, pois se o cliente decidir deixar o servico 
-            //pago os usuarios consiguirao visualizar que o servico ja foi pago com antecedencia
-
             // REALIZAR UPDATE
             if($transporte == 1){
 
@@ -115,9 +113,9 @@
                                 if(mysqli_query($conexao, $sql)){
 
                                     if(isset($_GET['idcliente'])){
-                                        header('location: ../confirmar-ordem-servico.php?idos='.$rsConsulta['id'].'&idcliente='.$_GET['idcliente']);
+                                        header('location: ../confirmar-ordem-servico.php?ido3131s='.$rsConsulta['id'].'&idcliente='.$_GET['idcliente']);
                                     }else{
-                                        header('location: ../confirmar-ordem-servico.php?idos='.$rsConsulta['id']);
+                                        header('location: ../confirmar-ordem-servico.php?i3131dos='.$rsConsulta['id']);
                                     }
 
                                 }else{

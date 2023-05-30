@@ -3,6 +3,7 @@
     require_once('bd/conexao.php');
     $conexao = conexaoMysql();
 
+
     if(isset($_GET['idos'])){
 
     
@@ -12,6 +13,14 @@
 
         $select = mysqli_query($conexao, $sql);
 
+        $sqldois = "SELECT doencas.nome AS nome_doenca from doencas";
+
+        $selectdois = mysqli_query($conexao, $sqldois);
+
+        if ($rsConsulta = mysqli_fetch_array($selectdois)) {
+            $doencas = $rsConsulta['nome_doenca'];
+        }
+       
         if($rsConsulta = mysqli_fetch_array($select)){
 
             $nome_cliente = $rsConsulta['nome_cliente'];
@@ -27,18 +36,6 @@
             $obs = $rsConsulta['obs'];
             $transporte = $rsConsulta['transporte'];
             $situacao = $rsConsulta['situacao'];
-            if($transporte != 0){
-
-                // listar informacoes sobre endereco se for optado por taxi dog
-                $cep = $rsConsulta['cep'];
-                $logradouro = $rsConsulta['logradouro'];
-                $bairro = $rsConsulta['bairro'];
-                $cidade = $rsConsulta['cidade'];
-                $uf = $rsConsulta['uf'];
-                $numero = $rsConsulta['numero'];
-                $valor_transporte = $rsConsulta['valor_transporte'];
-            }
-
         }
     }
 
@@ -76,6 +73,12 @@
                     </div>
                     <div class="linha-tabela-orderm texto-center">
                         <div class="coluna-tabela-ordem">
+                            Observações: <h4><?=$obs?></h4>
+                        </div>
+                    </div>
+
+                    <div class="linha-tabela-orderm texto-center">
+                        <div class="coluna-tabela-ordem">
                             ANIMAL: <h4><?=$animal?></h4>
                         </div>
 
@@ -86,6 +89,15 @@
 
                     <div class="linha-tabela-orderm texto-center">
                         <div class="coluna-tabela-ordem">
+                            Doença: <h4><?=$doencas?></h4>
+                        </div>
+                    <div class="linha-tabela-orderm texto-center">
+                        <div class="coluna-tabela-ordem">
+                            Veterinário Responsável: <h4></h4>
+                        </div>
+
+                    <div class="linha-tabela-orderm texto-center">
+                        <div class="coluna-tabela-ordem">
                             Data: <h4><?=$data_ordem?></h4>
                         </div>
 
@@ -93,52 +105,11 @@
                             Horário: <h4><?=date_format($horario_ordem, "H:i")?></h4>
                         </div>
                     </div>
-
-                    <?php
-                    
-                        if($transporte != 0){
-
-                    ?>
-                    <div class="linha-tabela-orderm texto-center">
-                        <div class="coluna-tabela-ordem">
-                            CEP:  <h4><?=$cep?></h4>
-                        </div>
-
-                        <div class="coluna-tabela-ordem">
-                            Bairro: <h4><?=$bairro?></h4>
-                        </div>
-                    </div>
-
-                    <div class="linha-tabela-orderm texto-center">
-                    <div class="coluna-tabela-ordem">
-                            Rua: <h4><?=$logradouro?></h4>
-                        </div>
-
-                        <div class="coluna-tabela-ordem">
-                            Numero: <h4><?=$numero?></h4>
-                        </div>
-                    </div>
-
-                    <div class="linha-tabela-orderm texto-center">
-
-                        <div class="coluna-tabela-ordem">
-                            Cidade: <h4><?=$cidade?></h4>
-                        </div>
-                        <div class="coluna-tabela-ordem">
-                            UF: <h4><?=$uf?></h4>
-                        </div>
-                    </div>
-
-                    <?php
-                        }
-                    ?>
-
-                    
                 </div>
                 <div class="servicos-escolhidos">
                     <div class="linha-servicos-escolhidos azul-marinho">
                         <div class="coluna-servicos-escolhidos">
-                            SERVIÇO
+                            Tratamento
                         </div>
                         <div class="coluna-servicos-escolhidos">
                             VALOR

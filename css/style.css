@@ -1178,13 +1178,48 @@ tr{
     margin-top: 10px;
 }
 
-.coluna-tabela-ordem h4, .coluna-servicos-escolhidos input{
+.coluna-tabela-ordem h4{
     width: 15%;
     margin: 0 auto;
     background: rgb(218, 218, 218);
     padding: 10px 20px;
     margin-top: 10px;
     border-radius: 25px;
+}
+
+.coluna-servicos-escolhidos input{
+    width: 35%;
+    margin: 0 auto;
+    background: rgb(218, 218, 218);
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 25px;
+
+}
+.consumir-doencas{
+    border-top: none;
+    text-align: center;
+    margin: 0 auto;
+    width: 30%;
+}
+
+
+.linha-servicos-escolhidos{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(231, 231, 231);
+    width: 30%;
+    margin: 0 auto;
+}
+
+.linha-servicos-escolhidos .coluna-servicos-escolhidos{
+    margin-right: 50px;
+    padding: 10px 0px;
+}
+
+
+.consumir-doencas h1{
+    border-bottom: 1px solid black;
 }
 
 .body-atendimento,
@@ -1196,7 +1231,8 @@ tr{
 .config-animals-secao,
 .body-consumir-servicos,
 .body-consumir-servicos,
-.body-confirmar-ordem{
+.body-confirmar-ordem,
+.body-os-corpo{
     background-color: rgb(32, 32, 32);
 }
 
