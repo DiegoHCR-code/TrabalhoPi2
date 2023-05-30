@@ -109,7 +109,7 @@
 .menu-painel{
     width: 50px;
     height: 100vh;
-    background-color:red;
+    background-color:black;
     transition: 300ms;
     position: fixed;
     z-index: 10;

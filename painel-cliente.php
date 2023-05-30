@@ -56,7 +56,7 @@
     <div class="conteudo-cliente">
         <div class="informacoes-cliente">
             <div class="linha-painel-cliente">
-                <div class="info-cliente-item">
+            <div class="info-cliente-item">
                     <div class="img-avatar">
                     <img class="avatar" src="icon/avatar/<?=$rsCliente['avatar']?>" alt="avatar">
                     </div>
@@ -86,6 +86,9 @@
                         }
                     ?>
                 </button>
+                </div>
+                <div class="consumir">
+                    <button class="botao"><a href="bd/ordem-servico.php?idcliente=<?=$_GET['idcliente']?>">Cadastrar consulta</a></button>
                 </div>
                 </div>
             </div>

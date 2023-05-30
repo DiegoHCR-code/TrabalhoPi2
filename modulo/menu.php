@@ -78,6 +78,18 @@ if(!isset($_SESSION)){
     
     </div>
 
+    <div class="menu-item">
+        <a href="autenticacao-estoque.php">
+            Serviços Armazenados
+            <img src="icon/<?=$imgEstoque?>" alt="locked">
+
+            <div class="icones-holder">
+                <img src="icon/box.png" alt="iconesMenu">
+            </div>
+
+        </a>
+    </div>
+
     <div class="menu-item texto-branco">
 
         <a href="autenticacao-usuarios.php" class="texto-branco">
