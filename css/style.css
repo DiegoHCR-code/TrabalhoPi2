@@ -213,7 +213,13 @@
 .linha-tabela-servicos{
     display: flex;
     flex-direction: row;
+    justify-content: center;
     padding: 20px 0px;
+}
+
+hr{
+    width: 75%;
+    margin: 0 auto;
 }
 
 .coluna-ordem-servico, .coluna-tabela-servicos{
@@ -222,6 +228,7 @@
 
 .linha-tabela-orderm{
     margin-top: 20px;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .confirmarBtConsumir{
@@ -247,6 +254,21 @@
     border-bottom: 1px solid #000000d1;
     width: 70%;
     margin-bottom: 20px;
+}
+
+.coluna-tabela-ordem-nome h5{
+    font-family: 'Dancing Script', cursive;
+    font-size: 30px;
+    border-bottom: 1px solid #000000d1;
+    width: 15%;
+    margin-bottom: 20px;
+}
+
+.titulo-servicos{
+    font-family: 'Dancing Script', cursive;
+    font-size: 30px;
+    margin-bottom: 5px;
+    text-align: center;
 }
 
 .coluna-tabela-ordem-nome{
@@ -1131,6 +1153,39 @@ tr{
     color: white;
 }
 
+.servicos-escolhidos,
+.linha-servicos-escolhidos{
+    text-align: center;
+}
+
+.coluna-servicos-escolhidos .botao{
+    background-color: green;
+    color: white;
+    padding: 10px 25px;
+    margin: 15px 10px 0 10px;
+    border: none;
+    border-radius: 25px;
+}
+.coluna-servicos-escolhidos .botao-voltar-confir{
+    background-color: red;
+}
+
+.coluna-servicos-escolhidos .botao-voltar-confir a{
+    color: white;
+}
+
+.coluna-tabela-ordem{
+    margin-top: 10px;
+}
+
+.coluna-tabela-ordem h4, .coluna-servicos-escolhidos input{
+    width: 15%;
+    margin: 0 auto;
+    background: rgb(218, 218, 218);
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 25px;
+}
 
 .body-atendimento,
 .body-cadastrar-cliente,
@@ -1139,8 +1194,14 @@ tr{
 .body-painel-cliente,
 .body-cadastro-animal,
 .config-animals-secao,
-.body-consumir-servicos{
+.body-consumir-servicos,
+.body-consumir-servicos,
+.body-confirmar-ordem{
     background-color: rgb(32, 32, 32);
+}
+
+.linha-endereco-os{
+    text-align: center;
 }
 
 .consumir-servicos{
@@ -1148,6 +1209,22 @@ tr{
     width: 90%;
     border-radius: 25px;
     margin: 50px auto;
+}
+
+.tabela-servicos-ordem{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pagina-inicial-transporte{
+    width: 90%;
+    margin: 50px auto;
+    background: white;
+    border-radius: 25px;
+    padding: 50px;
+
 }
 
 .wrapper-conteudo-consumir-servicos{

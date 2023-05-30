@@ -178,16 +178,16 @@
 .container-welcome-1,
 .container-cadastro-produto,
 .container-visualizar{
-    width: 400px;
-    height: 200px;
+    width: 700px;
+    height: 400px;
     border-radius: 8px;
     box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.363);
-    background-color: rgb(238, 230, 255);
+    background-color: rgb(226, 226, 226);
 }
 .container-welcome,
 .container-welcome-1{
-    width: 550px;
-    height: 250px;
+    width: 700px;
+    height: 400px;
     margin-bottom: 20px;
 }
 .container-welcome-1{
@@ -238,6 +238,8 @@
     display: flex;
     align-items: center;
 }
+
+
 .titulo{
     height: 50px;
     font-size:20px;
@@ -274,10 +276,22 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgb(122, 121, 189);
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
+    background-color: rgb(32,32,32);
+    border-radius: 25px 25px 0 0;
 }
+
+.container-cadastro-produto{
+    border-radius: 25px;
+    border: 1px solid rgb(32,32,32);
+}
+
+.titulo, .empresa-nome, .linha-form h4{
+    margin-top: 25px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
 .linha div{
     width: 50px;
     height: 50px;
@@ -305,6 +319,17 @@
     width: 400px;
     height: 400px;
 }
+
+.linha-form input, textarea{
+    background-color: #f2f0f0;
+    border-radius: 25px;
+    padding: 5px 50px;
+    margin-top: 10px;
+    border: 1px solid rgb(197, 197, 197);
+    box-shadow: 1px 3px 5px #e8e8e8;
+}
+
+
 .linha-form,
 .linha-form-botao,
 .linha-form-txtarea{
@@ -315,6 +340,7 @@
     box-sizing: border-box;
     padding: 5px;
     margin-bottom: 10px;
+    justify-content: center;
 }
 .linha-form-botao{
     align-items: center;
@@ -329,6 +355,11 @@
 .linha-form-txtarea{
     height: 150px;
 }
+
+
+
+
+
 #produto-nome,
 #produto-preco,
 #produto-quantidade,
@@ -359,18 +390,28 @@
 #produto-categoria{
     width: 200px;
 }
-.botao-produto,
-#botao-fechar{
-    width: 150px;
-    height: 30px;
-    background-color: rgb(122, 121, 189);
+.botao-produto{
+    background-color: green;
     color: #fff;
     font-weight: bold;
     border:0;
-    border-radius: 4px;
+    padding: 15px 25px;
+    border-radius: 25px;
     transition: 300ms;
     z-index: 99999;
 }
+
+#botao-fechar{
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 25px;
+    transition: 300ms;
+    z-index: 99999;
+}
+
 #botao-fechar{
     display: flex;
     align-items: center;
@@ -378,10 +419,11 @@
     float: right;
     
 }
-.botao-produto:hover,
 #botao-fechar:hover{
     cursor: pointer;
-    background-color: rgb(99, 98, 150);
+    background-color: white;
+    color: red;
+    border: 1px solid red;
     transition: 300ms;
 }
 #servico-desc{
@@ -448,8 +490,13 @@ label img{
     padding-top: 5px;
     text-align: justify;
     display: flex;
-    background-color: darkslateblue;
+    background-color: rgb(32,32,32);
 }
+
+.linha-head{
+    border-radius: 25px 25px 0 0;
+}
+
 .linha-tabela{
     height: auto;
     min-height: 30px;
@@ -470,7 +517,7 @@ label img{
     width: 100px;
 }
 .cor{
-    background-color: rgb(238, 230, 255);
+    background-color: rgb(238, 238, 238);
 }
 .coluna-tabela{
     color:#000;
@@ -503,7 +550,7 @@ label img{
     box-sizing: border-box;
     border-radius: 10px;
     padding: 50px;
-    background-color: rgb(238, 230, 255);
+    background-color: rgb(224, 224, 224);
 
 }
 .informacoes-modal-produto{

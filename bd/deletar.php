@@ -14,6 +14,7 @@ $clientes = (String) "clientes";
 //$produtos = (String) "produtos";
 $animais = (String) "animais";
 //$servicos = (String) "servicos";
+$servicos = (String) "servicos";
 
 //deletar categorias
 if(isset($_GET['modo'])){
@@ -100,20 +101,14 @@ if(isset($_GET['modo'])){
             header('location: ../clientes.php');
         }
     }
-    /*if($_GET['modo'] == 'deletarproduto'){
-        $id = $_GET['id'];
-
-        if(deletarRegistro($produtos, $id)){
-            header('location: ../painel-produtos/visualizar-produtos.php');
-        }
-    }
+    
     if($_GET['modo'] == 'deletarservico'){
         $id = $_GET['id'];
 
         if(deletarRegistro($servicos, $id)){
             header('location: ../painel-produtos/visualizar-servicos.php');
         }
-    }*/
+    }
     if($_GET['modo'] == 'deletaranimal'){
 
         $id = $_GET['id'];

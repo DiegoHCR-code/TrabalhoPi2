@@ -61,6 +61,8 @@
         <title>Petzone</title>
         <link rel="stylesheet" href="./css/style.css">
         <script src="js/modulo.js"></script>
+        <script src="js/jquery.js"></script>
+        <script src="./painel-produtos/js/toggle-menu.js"></script>
         <link rel="shortcut icon" href="./icon/favicon.ico" type="image/x-icon">
     </head>
     <body class="body-cadastro-animal">

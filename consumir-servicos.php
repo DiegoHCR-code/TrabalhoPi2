@@ -80,7 +80,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Petzone</title>
+        <title>SIAP</title>
         <link rel="stylesheet" href="css/style.css">
         <script src="js/jquery.js"></script>
         <script src="painel-produtos/js/toggle-menu.js"></script>
@@ -115,15 +115,13 @@
         </script>
     </head>
     <body class="body-consumir-servicos">
-        <section class="consumir-servicos">
-            <div class="wrapper-conteudo-consumir-servicos">
-            <div class="pagina-inicial-transporte">
-            <div class="formulario-agendamento-servico">                    
-                </div>
+
+        <div class="pagina-inicial-transporte">
+            <div class="formulario-agendamento-servico">
                 <form action="<?=$action?>" method="POST" class="cadastrar-ordem-servico" id="formOS">
                     <div class="linha-tabela-orderm">
                         <div class="coluna-tabela-ordem-nome">
-                            <h4>Animal</h4>
+                            <h5>Animal</h5>
                         </div>
                         <div class="coluna-tabela-ordem">
                                 <?php
@@ -179,7 +177,7 @@
 
                     <div class="linha-tabela-orderm margem-bottom-pequena">
                         <div class="coluna-tabela-ordem-nome">
-                            <h4>Nome do cliente</h4>
+                            <h5>Nome do cliente</h5>
                         </div>
                         <div class="coluna-tabela-ordem">
                             <input type="text" name="txt-nome-ordem" onkeypress="return validarEntrada(event,'numeric');" value="<?=$nome?>" class='input-ordem'>
@@ -188,14 +186,19 @@
 
                     <div class="linha-tabela-orderm">
                         <div class="coluna-tabela-ordem-nome">
-                            <h4>Telefone para contato</h4>
+                            <h5>Telefone para contato</h5>
                         </div>
                         <div class="coluna-tabela-ordem">
                             <input type="text" name="txt-contato-ordem" onkeypress="return mascaraFone(this,event);" value="<?=$contato?>" class="input-ordem">
                         </div>
                     </div>
+
                     
-                    <h5 class="texto-center">Selecione os serviços</h5>
+                    
+                    
+                    <div class="titulo-servicos">
+                        <h5>Selecione os serviços</h5>
+                    </div>
                     <hr>
 
                     <!-- servicos vindos do banco de dados -->
@@ -235,7 +238,7 @@
                     <hr>
                     <div class="linha-tabela-orderm margem-top-pequena margem-bottom-pequena">
                         <div class="coluna-tabela-ordem-nome">
-                            <h4>Observações</h4>
+                            <h5>Observações</h5>
                         </div>
                         <div class="coluna-tabela-ordem">
                             <textarea name="txt-obs-ordem" id="descricao-obs"></textarea>
@@ -244,7 +247,7 @@
 
 
 
-                    <div class="linha-tabela-servicos confirmarBtConsumir">
+                    <div class="linha-tabela-servicos">
                         <button id="confirmButton" type="submit" name="btn-cadastrar-ordem" class="botao center">
                             
                             CONFIRMAR
@@ -258,7 +261,5 @@
 
             </div>
         </div>
-            </div>
-        </section>
     </body>
 </html>
