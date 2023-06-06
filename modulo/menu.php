@@ -90,8 +90,17 @@ if(!isset($_SESSION)){
                 <img src="icon/avatar/user1.png" alt="img" class="iconesMenu">
             </div>
         </a>
-    
     </div>
+
+    <div class="menu-item texto-branco">
+        <a href="monitoramento.php" class="texto-branco">
+            MONITORAR SERVIÇOS
+            <div class=" icones-holder">
+                <img src="icon/pet.png" alt="img" class="iconesMenu">
+            </div>
+        </a>
+    </div>
+
 </div>
 
 

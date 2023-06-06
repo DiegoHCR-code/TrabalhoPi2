@@ -928,6 +928,176 @@ tr{
     border-top: 1px solid black;
 }
 
+.legenda-trasporte-status {
+    width: 100%;
+    height: 60px;
+    background-color: #fff;
+    border-top: solid 1px #000;
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+    box-sizing: border-box;
+}
+
+#close-modal {
+    width: 35px;
+    height: 35px;
+    position: relative;
+    left: 880px;
+    top: -280px;
+}
+
+#modal-ordem {
+    width: 1000px;
+    height: 600px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 50px;
+    background-color: rgb(238, 230, 255);
+}
+
+.coluna-tabela-ordem-servico  {
+    height: 100%;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: #fff;
+    border-left: solid 1px #fff;
+    font-size: 12px;
+}
+
+.coluna-tabela-ordem-servico-tes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: #fff;
+    border-left: solid 1px #fff;
+    font-size: 12px;
+    padding: 0 25px;
+
+}
+
+.coluna-tabela-ordem-servico-tes p {
+    padding-left: 25px;
+}
+
+.coluna-tabela-ordem-servico-tes img {
+    width: 70px;
+    height: 50px;
+}
+
+.selecione-data img {
+    width: 30px;
+}
+
+.selecione-data button{
+    border: none;
+}
+
+.selecione-data h6{
+    width: 50%;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.pagina-inicial-transporte-consulta {
+    flex-direction: column;
+    float: right;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.tranportes-confirmados {
+    width: 1000px;
+    height: 596px;
+    background-color: #fff;
+    overflow-y: auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding-left: 50px;
+}
+
+.selecione-data {
+    width: 400px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.selecione-data button {
+    margin-left: 10px;
+    border-radius: 3px;
+}
+
+.tabela-transportes {
+    width: 100%;
+    height: auto;
+    min-height: 50px;
+}
+
+.tabela-grande{
+    width: 100% !important;
+}
+
+.linha-tabela-ordem-servico {
+    height: 30px;
+    background-color: rgb(62, 62, 62);
+}
+
+.header-modal-os {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-opns{
+    background-color:rgb(32, 32, 32);
+    color:white;
+}
+
+.linha-tabela-ordem-servico {
+    width: 100%;
+    height: 50px;
+    background-color: rgb(62, 62, 62);
+    display: flex;
+    color: #fff;
+}
+
+.linha-modal-os{
+    padding: 15px;
+    background: rgb(107, 107, 107);
+    color: white;
+}
+
+.linha{
+    width: 100%;
+    height: 60px;
+    background-color: #e4f5fd;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#container-modal-compras, #container-modalTransporte, #container-modal-ordem {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.705);
+    position: fixed;
+    display: flex;
+    z-index: 0;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: 500ms;
+}
+
 .lista-doencas .linha{
     display: flex;
     margin: 20px 0px;

@@ -8,7 +8,7 @@
 
         $password = (string) "bcd127"; //senha para conexão com o banco de dados
 
-        $database = (string) "trabalhopi2diegohenrique"; //nome do database
+        $database = (string) "trabalhopi2"; //nome do database
 
         $conexao = mysqli_connect($server, $user, $password, $database);
         

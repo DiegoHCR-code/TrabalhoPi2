@@ -136,7 +136,7 @@
                                             $data_compra = $data_compra[2]."/".$data_compra[1]."/".$data_compra[0];
 
                                         
-                                            // $data_hora_compra = $hora_compra[1]."/".$data_compra[1]."/".$data_compra[0];
+                                             $data_hora_compra = $hora_compra[1]."/".$data_compra[1]."/".$data_compra[0];
 
                                     ?>
                                         
